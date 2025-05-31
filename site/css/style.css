@@ -1,1 +1,410 @@
 
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Шапка */
+header {
+    background: rgb(65, 6, 55);
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.header-content {
+    display: flex;
+    flex-direction:row-reverse ;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 15px;
+}
+
+.logo h1 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+
+/* Основное содержимое */
+main {
+    padding: 40px 0;
+    min-height: calc(100vh - 180px);
+}
+
+.hero {
+    background-color: rgb(47, 47, 47);;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.hero h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 24px;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: rgb(65, 6, 55);
+    color: white;
+    padding: 24px 60px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-top: 50px;
+}
+
+.btn:hover {
+    background-color: rgb(181, 91, 166);
+    transform: translateY(-2px);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+    color: rgb(65, 6, 55);;
+}
+
+/* Стили для главной страницы */
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.feature-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card h3 {
+    margin-bottom: 15px;
+    color: rgb(65, 6, 55);
+}
+
+/* Стили для страницы "О проекте" */
+.project-details {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+    align-items: center;
+}
+
+.project-image {
+    flex: 1;
+}
+
+.project-image img {
+    width: 100%;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.project-description {
+    flex: 1;
+}
+
+.project-goals {
+    background-color: white;
+    padding: 30px;
+    border-radius: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.project-goals ul {
+    list-style-position: inside;
+    margin-top: 20px;
+}
+
+.project-goals li {
+    margin-bottom: 10px;
+}
+
+.project-partners {
+    margin-bottom: 40px;
+}
+
+.partners-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.partner-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.partner-card img {
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+/* Стили для страницы "Участники" */
+.team-members {
+    display: flex;
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.member-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    width: 340px;
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+}
+
+.member-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 5px solid #f0f0f0;
+}
+
+.member-card h3 {
+    margin-bottom: 5px;
+    color: rgb(65, 6, 55);
+}
+
+.member-card .role {
+    color: #666;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+/* Стили для страницы "Журнал" */
+.journal-entries {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.journal-entry {
+    background-color: white;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.entry-header {
+    padding: 20px;
+    background-color: rgb(65, 6, 55);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.entry-header h2 {
+    font-size: 24px;
+}
+
+.entry-content {
+    padding: 30px;
+}
+
+.entry-content img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Стили для страницы "Ресурсы" */
+.resources-section {
+    background-color: white;
+    padding: 30px;
+    border-radius: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.resources-section h2 {
+    margin-bottom: 20px;
+    color: rgb(65, 6, 55);
+}
+
+.resources-list {
+    list-style-type: none;
+}
+
+.resources-list li {
+    margin-bottom: 15px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.resources-list li::before {
+    content: "•";
+    color: #2a5298;
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+}
+
+.resources-list a {
+    color: #2a5298;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.resources-list a:hover {
+    color: #1e3c72;
+    text-decoration: underline;
+}
+
+.video-resources {
+    margin-top: 40px;
+}
+
+.video-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.video-container iframe {
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Подвал */
+footer {
+    background-color: rgb(65, 6, 55);
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+    }
+    
+    nav ul {
+        margin-top: 20px;
+    }
+    
+    .features {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-details {
+        flex-direction: column;
+    }
+    
+    .partners-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero h2 {
+        font-size: 28px;
+    }
+    
+    .hero p {
+        font-size: 16px;
+    }
+}
